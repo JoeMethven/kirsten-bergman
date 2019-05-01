@@ -1,0 +1,31 @@
+nav
+
+  > ul
+    +flexAlignSelf(center)
+
+  ul li
+    display: inline-block
+    padding-right: $bsu
+
+    &.active
+      a
+        opacity: 0.6
+
+        &:hover
+          opacity: 0.6
+
+    &:last-child
+      padding-right: 0
+
+  i.fa
+    font-size: 1.80em
+
+  +media-query(palm)
+    ul
+      text-align: center
+
+      li:last-child
+        padding-right: 0
+
+    i.fa
+      font-size: 1.60em

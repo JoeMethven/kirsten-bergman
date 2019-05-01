@@ -1,0 +1,416 @@
+// Grid displays all styling relating to main layout and alignment of modules
+
+// Container
+
+.container
+  height: inherit
+  display: block
+  margin: 0 auto
+  width: 1200px
+  padding-left: 40px
+  padding-right: 40px
+
+  &.container--full
+    width: auto!important
+    padding-left: 0
+    padding-right: 0
+
+  +media-query(desktop)
+    width: 1300px
+  +media-query(laptop)
+    width: 1200px
+  +media-query(notebook)
+    width: 1000px
+  +media-query(tablet)
+    width: 720px
+  +media-query(palm)
+    width: 520px
+    padding-left: 20px
+    padding-right: 20px
+  +media-query(phone)
+    width: 480px
+    padding-left: 5px
+    padding-right: 5px
+  @media (max-width: 500px)
+    width: 80%
+
+// Global Layout Alterations
+
+.global-component
+  padding-top: $dsu
+  padding-bottom: $dsu
+
+.component
+  padding-bottom: $bsu
+  &.component--spread
+    padding-top: $bsu
+  &.component--large
+    padding-bottom: $dsu
+
+// Base Grid Classes
+
+.item
+  padding-left: $bsu
+  padding-right: $bsu
+  &:last-child
+    padding-right: 0
+  &:first-child
+    padding-left: 0
+
+.row
+  margin-top: $hsu
+
+.grid
+  height: inherit
+  display: block
+  margin-right: 0
+  margin-left: -$bsu
+
+  .grid-item
+    height: inherit
+    display: inline-block
+    padding-left: $bsu
+    margin-left: 0
+    margin-right: 0
+    vertical-align: top
+
+    &.title
+      margin-top: 0
+
+    &:last-child:not(.grid-12)
+      padding-right: $bsu
+
+  &.no-top
+    .grid-item
+      margin-top: 0
+
+  &.no-spacing
+    .grid-item
+      margin-right: -25px
+
+  // core grid classes
+
+  .grid-12
+    width: 100%
+  .grid-11
+    width: 91.6666667%
+  .grid-10
+    width: 83.3333333%
+  .grid-9
+    width: 75%
+  .grid-8
+    width: 66.6666667%
+  .grid-7
+    width: 58.3333333%
+  .grid-6
+    width: 50%
+  .grid-5
+    width: 41.6666667%
+  .grid-4
+    width: 33.3333333%
+  .grid-3
+    width: 25%
+  .grid-2
+    width: 16.6666667%
+  .grid-1
+    width: 8.33333333%
+  .grid-v-12
+    height: 100%
+  .grid-v-11
+    height: 91.6666667%
+  .grid-v-10
+    height: 83.3333333%
+  .grid-v-9
+    height: 75%
+  .grid-v-8
+    height: 66.6666667%
+  .grid-v-7
+    height: 58.3333333%
+  .grid-v-6
+    height: 50%
+  .grid-v-5
+    height: 41.6666667%
+  .grid-v-4
+    height: 33.3333333%
+  .grid-v-3
+    height: 25%
+  .grid-v-2
+    height: 16.6666667%
+  .grid-v-1
+    height: 8.33333333%
+  .grid-hide
+    display: none
+  .grid-show
+    display: inline-block
+
+  +media-query(laptop)
+    .laptop-grid-12
+      width: 100%
+    .laptop-grid-11
+      width: 91.6666667%
+    .laptop-grid-10
+      width: 83.3333333%
+    .laptop-grid-9
+      width: 75%
+    .laptop-grid-8
+      width: 66.6666667%
+    .laptop-grid-7
+      width: 58.3333333%
+    .laptop-grid-6
+      width: 50%
+    .laptop-grid-5
+      width: 41.6666667%
+    .laptop-grid-4
+      width: 33.3333333%
+    .laptop-grid-3
+      width: 25%
+    .laptop-grid-2
+      width: 16.6666667%
+    .laptop-grid-1
+      width: 8.33333333%
+    .laptop-grid-hide
+      display: none
+    .laptop-grid-v-12
+      width: 100%
+    .laptop-grid-v-11
+      width: 91.6666667%
+    .laptop-grid-v-10
+      width: 83.3333333%
+    .laptop-grid-v-9
+      width: 75%
+    .laptop-grid-v-8
+      width: 66.6666667%
+    .laptop-grid-v-7
+      width: 58.3333333%
+    .laptop-grid-v-6
+      width: 50%
+    .laptop-grid-v-5
+      width: 41.6666667%
+    .laptop-grid-v-4
+      width: 33.3333333%
+    .laptop-grid-v-3
+      width: 25%
+    .laptop-grid-v-2
+      width: 16.6666667%
+    .laptop-grid-v-1
+      width: 8.33333333%
+    .laptop-grid-hide
+      display: none
+    .laptop-grid-show
+      display: inline-block
+
+  +media-query(portable)
+    .portable-grid-12
+      width: 100%
+    .portable-grid-11
+      width: 91.6666667%
+    .portable-grid-10
+      width: 83.3333333%
+    .portable-grid-9
+      width: 75%
+    .portable-grid-8
+      width: 66.6666667%
+    .portable-grid-7
+      width: 58.3333333%
+    .portable-grid-6
+      width: 50%
+    .portable-grid-5
+      width: 41.6666667%
+    .portable-grid-4
+      width: 33.3333333%
+    .portable-grid-3
+      width: 25%
+    .portable-grid-2
+      width: 16.6666667%
+    .portable-grid-1
+      width: 8.33333333%
+    .portable-grid-v-12
+      height: 100%
+    .portable-grid-v-11
+      height: 91.6666667%
+    .portable-grid-v-10
+      height: 83.3333333%
+    .portable-grid-v-9
+      height: 75%
+    .portable-grid-v-8
+      height: 66.6666667%
+    .portable-grid-v-7
+      height: 58.3333333%
+    .portable-grid-v-6
+      height: 50%
+    .portable-grid-v-5
+      height: 41.6666667%
+    .portable-grid-v-4
+      height: 33.3333333%
+    .portable-grid-v-3
+      height: 25%
+    .portable-grid-v-2
+      height: 16.6666667%
+    .portable-grid-v-1
+      height: 8.33333333%
+    .portable-grid-hide
+      display: none
+    .portable-grid-show
+      display: inline-block
+
+  +media-query(tablet)
+    .tablet-grid-12
+      width: 100%
+    .tablet-grid-11
+      width: 91.6666667%
+    .tablet-grid-10
+      width: 83.3333333%
+    .tablet-grid-9
+      width: 75%
+    .tablet-grid-8
+      width: 66.6666667%
+    .tablet-grid-7
+      width: 58.3333333%
+    .tablet-grid-6
+      width: 50%
+    .tablet-grid-5
+      width: 41.6666667%
+    .tablet-grid-4
+      width: 33.3333333%
+    .tablet-grid-3
+      width: 25%
+    .tablet-grid-2
+      width: 16.6666667%
+    .tablet-grid-1
+      width: 8.33333333%
+    .tablet-grid-v-12
+      height: 100%
+    .tablet-grid-v-11
+      height: 91.6666667%
+    .tablet-grid-v-10
+      height: 83.3333333%
+    .tablet-grid-v-9
+      height: 75%
+    .tablet-grid-v-8
+      height: 66.6666667%
+    .tablet-grid-v-7
+      height: 58.3333333%
+    .tablet-grid-v-6
+      height: 50%
+    .tablet-grid-v-5
+      height: 41.6666667%
+    .tablet-grid-v-4
+      height: 33.3333333%
+    .tablet-grid-v-3
+      height: 25%
+    .tablet-grid-v-2
+      height: 16.6666667%
+    .tablet-grid-1
+      width: 8.33333333%
+    .tablet-grid-hide
+      display: none
+    .tablet-grid-show
+      display: inline-block
+
+  +media-query(palm)
+    .palm-grid-12
+      width: 100%
+    .palm-grid-11
+      width: 91.6666667%
+    .palm-grid-10
+      width: 83.3333333%
+    .palm-grid-9
+      width: 75%
+    .palm-grid-8
+      width: 66.6666667%
+    .palm-grid-7
+      width: 58.3333333%
+    .palm-grid-6
+      width: 50%
+    .palm-grid-5
+      width: 41.6666667%
+    .palm-grid-4
+      width: 33.3333333%
+    .palm-grid-3
+      width: 25%
+    .palm-grid-2
+      width: 16.6666667%
+    .palm-grid-1
+      width: 8.33333333%
+    .palm-grid-v-12
+      height: 100%
+    .palm-grid-v-11
+      height: 91.6666667%
+    .palm-grid-v-10
+      height: 83.3333333%
+    .palm-grid-v-9
+      height: 75%
+    .palm-grid-v-8
+      height: 66.6666667%
+    .palm-grid-v-7
+      height: 58.3333333%
+    .palm-grid-v-6
+      height: 50%
+    .palm-grid-v-5
+      height: 41.6666667%
+    .palm-grid-v-4
+      height: 33.3333333%
+    .palm-grid-v-3
+      height: 25%
+    .palm-grid-v-2
+      height: 16.6666667%
+    .palm-grid-v-1
+      height: 8.33333333%
+    .palm-grid-hide
+      display: none
+    .palm-grid-show
+      display: inline-block
+
+  +media-query(phone)
+    .phone-grid-12
+      width: 100%
+    .phone-grid-11
+      width: 91.6666667%
+    .phone-grid-10
+      width: 83.3333333%
+    .phone-grid-9
+      width: 75%
+    .phone-grid-8
+      width: 66.6666667%
+    .phone-grid-7
+      width: 58.3333333%
+    .phone-grid-6
+      width: 50%
+    .phone-grid-5
+      width: 41.6666667%
+    .phone-grid-4
+      width: 33.3333333%
+    .phone-grid-3
+      width: 25%
+    .phone-grid-2
+      width: 16.6666667%
+    .phone-grid-1
+      width: 8.33333333%
+    .phone-grid-v-12
+      height: 100%
+    .phone-grid-v-11
+      height: 91.6666667%
+    .phone-grid-v-10
+      height: 83.3333333%
+    .phone-grid-v-9
+      height: 75%
+    .phone-grid-v-8
+      height: 66.6666667%
+    .phone-grid-v-7
+      height: 58.3333333%
+    .phone-grid-v-6
+      height: 50%
+    .phone-grid-v-5
+      height: 41.6666667%
+    .phone-grid-v-4
+      height: 33.3333333%
+    .phone-grid-v-3
+      height: 25%
+    .phone-grid-v-2
+      height: 16.6666667%
+    .phone-grid-v-1
+      height: 8.33333333%
+    .phone-grid-hide
+      display: none
+    .phone-grid-show
+      display: inline-block

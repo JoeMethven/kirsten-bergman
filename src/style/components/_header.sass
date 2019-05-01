@@ -1,0 +1,41 @@
+#header
+  position: relative
+  z-index: 100
+  padding: 0 $bsu
+  height: 10vh
+  min-height: 70px
+  max-height: 100px
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.20);
+  +flex()
+  +flexDir(row)
+  +flexAlignContent(center)
+  +flexJustify(space-between)
+
+  h1, h2, h3
+    height: auto;
+    line-height: initial;
+    +flexAlignSelf(center)
+
+  > *
+    +flex()
+    +flexAlignContent(center)
+
+  +media-query(palm)
+    text-align: center
+    +flexDir(column)
+    +flexJustify(center)
+    +flexAlign(center)
+
+  *
+    margin: 0
+
+  > * > *
+    padding: $bsu
+    @extend %hard-right
+
+  +media-query(palm)
+    ul
+      padding-left: 0
+
+    > * > *
+      padding: $hsu

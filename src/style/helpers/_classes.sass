@@ -1,0 +1,131 @@
+// Misc helper classes
+
+// Clearfix
+
+.cf
+  &::before, &::after
+    content: " "
+    display: table
+  &::after
+    clear: both
+
+.fl
+  float: left
+
+// Float Types
+.fr
+  float: right
+
+// Align Types
+.al
+  text-align: left
+
+.ar
+  text-align: right
+
+.ac
+  text-align: center
+
+// Display Types
+.ib
+  display: inline-block
+
+.bl
+  display: block
+
+// Spacing types
+.push, %push
+  margin: $bsu!important
+.push-top, %push-top
+  margin-top: $bsu!important
+.push-left, %push-left
+  margin-left: $bsu!important
+.push-right, %push-right
+  margin-right: $bsu!important
+.push-bottom, %push-bottom
+  margin-bottom: $bsu!important
+.push-ends, %push-ends
+  margin-top: $bsu!important
+  margin-bottom: $bsu!important
+.push-sides, %push-sides
+  margin-left: $bsu!important
+  margin-right: $bsu!important
+
+.push-half, %push-half
+  margin: $hsu!important
+.push-half-top, %push-half-top
+  margin-top: $hsu!important
+.push-half-left, %push-half-left
+  margin-left: $hsu!important
+.push-half-right, %push-half-right
+  margin-right: $hsu!important
+.push-half-bottom, %push-half-bottom
+  margin-bottom: $hsu!important
+.push-half-ends, %push-half-ends
+  margin-top: $hsu!important
+  margin-bottom: $hsu!important
+.push-half-sides, %push-half-sides
+  margin-left: $hsu!important
+  margin-right: $hsu!important
+
+.soft, %soft
+  padding: $bsu!important
+.soft-top, %soft-top
+  padding-top: $bsu!important
+.soft-left, %soft-left
+  padding-left: $bsu!important
+.soft-right, %soft-right
+  padding-right: $bsu!important
+.soft-bottom, %soft-bottom
+  padding-bottom: $bsu!important
+.soft-ends, %soft-ends
+  padding-top: $bsu!important
+  padding-bottom: $bsu!important
+.soft-sides, %soft-sides
+  padding-left: $bsu!important
+  padding-right: $bsu!important
+
+.soft-half, %soft-half
+  padding: $hsu!important
+.soft-half-top, %soft-half-top
+  padding-top: $hsu!important
+.soft-half-left, %soft-half-left
+  padding-left: $hsu!important
+.soft-half-right, %soft-half-right
+  padding-right: $hsu!important
+.soft-half-bottom, %soft-half-bottom
+  padding-bottom: $hsu!important
+.soft-half-ends, %soft-half-ends
+  padding-top: $hsu!important
+  padding-bottom: $hsu!important
+.soft-half-sides, %soft-half-sides
+  padding-left: $hsu!important
+  padding-right: $hsu!important
+
+.flush, %flush
+  margin: 0!important
+.flush-top, %flush-top
+  margin-top: 0!important
+.flush-left, %flush-left
+  margin-left: 0!important
+.flush-right, %flush-right
+  margin-right: 0!important
+.flush-bottom, %flush-bottom
+  margin-bottom: 0!important
+
+.hard, %hard
+  padding: 0!important
+.hard-top, %hard-top
+  padding-top: 0!important
+.hard-left, %hard-left
+  padding-left: 0!important
+.hard-right, %hard-right
+  padding-right: 0!important
+.hard-bottom, %hard-bottom
+  padding-bottom: 0!important
+
+.hide, %hide
+  display: none!important
+
+.shade, %shade
+  background: darken($white, 2)

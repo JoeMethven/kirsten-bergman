@@ -1,0 +1,63 @@
+// Form styling represents elements which typically are in a form including some custom elements.
+
+form
+  display: block
+
+input, textarea
+  @extend %font-bold
+  font-size: 1em
+  display: block
+  width: 100%
+  letter-spacing: 2.5px
+  color: $black
+  background: $white
+  border: 0
+  border-radius: 10px
+  margin-bottom: 25px
+  padding: $ssu $hsu
+  text-transform: none
+  vertical-align: middle
+  cursor: pointer
+  cursor: hand
+  +transition(background, ease-in, 1s)
+  outline: none
+
+textarea
+  @extend %font-regular
+  letter-spacing: normal
+  min-height: $dsu + $hsu
+  height: 100%
+  padding-top: 25px
+  padding-bottom: 25px
+  resize: none
+
+// Buttons
+button
+  @extend a
+  +media-query(laptop)
+    font-size: 0.90em
+
+// Social Icons
+* + .social
+  padding-left: $ssu
+
+.social
+  display: block
+  i
+    +transition(color, ease-in, .3s)
+    color: lighten($gray, 15)
+    padding-top: $ssu
+    padding-right: $hsu
+    cursor: hand
+    cursor: pointer
+    &:hover
+      color: $green
+
+    +media-query(portable)
+      padding-right: $ssu
+
+  &.social--alternate
+    i
+      color: $dark-green
+      &:hover
+        color: $white

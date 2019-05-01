@@ -1,0 +1,73 @@
+%font-bold
+  font:
+    family: "broadsheet", sans-serif
+    weight: 600
+
+%font-regular
+  font:
+    family: "baskerville-urw", sans-serif
+    weight: 400
+    size: 0.90em
+  line-height: 1.20em
+*
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+h1
+  text-transform: uppercase
+  letter-spacing: 2px
+  font-size: 1.80em
+  line-height: 100%
+  +media-query(palm)
+    font-size: 1.60em
+
+h2
+  font-size: 1.50em
+
+h3
+  font-size: 1.25em
+
+h1, h2, h3
+  @extend %font-bold
+  margin-bottom: 0
+
+h1, h2, h3, h4, h5, h6
+  line-height: 120%
+  margin-bottom: $hsu
+
+a
+  color: $black
+  text-decoration: none
+  +transition(opacity, ease-in, .2s)
+  @extend %font-regular
+
+  &:visited
+    color: $black
+  &:hover
+    opacity: 0.9
+
+p
+  @extend %font-regular
+
+i.fa
+  font-size: 1.25em
+
+// Make things stand out
+.bold
+  letter-spacing: 0
+  color: $black
+  font:
+    family: $brand-font
+    weight: 600
+    size: 1em
+  +media-query(palm)
+    font-size: 0.90em
+
+// Title (page/module headings)
+.title
+  position: relative
+  z-index: 1
+  height: auto!important
+  padding-top: 0
+  &.title--alternate h2
+    color: $white
