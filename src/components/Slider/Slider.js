@@ -75,19 +75,23 @@ class Slider extends React.Component {
     const { content, controls, clicked, className } = this.props,
           index = this.state.itemIndex,
           classes = className || '',
-          clickClass = clicked ? ' clickable' : ''
+          clickClass = clicked ? ' clickable' : '';
 
-    let addControls = null
+    let addControls = null;
+
+    if (!content.length) {
+      return null;
+    }
 
     if (controls) {
-      addControls = this.addControls()
+      addControls = this.addControls();
     }
 
     return (
       <div class={classes + clickClass}>
         {controls}
         <Transition transitionName="gallery" transitionAppear={true} transitionAppearTimeout={500} transitionEnterTimeout={1000} transitionLeaveTimeout={1100}>
-          <Item key={content[index].id} content={content[index]} clicked={clicked} />
+          <Item key={content[index]._id} content={content[index]} clicked={clicked} />
         </Transition>
       </div>
     )

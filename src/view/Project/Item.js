@@ -3,16 +3,11 @@ import React from 'react';
 import { Link } from "react-router-dom";
 
 class Item extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      index: 0
-    }
-  }
-
   render() {
-    const { content } = this.props,
-          { index } = this.state
+    const { content } = this.props;
+    console.log('content', content);
+
+    const image = `data:${content.images[0].contentType};base64,${content.images[0].data}`;
 
     let edit = false;
 
@@ -27,13 +22,13 @@ class Item extends React.Component {
           <div class="grid-item grid-8 portable-grid-12 portable-grid-v-6">
             <div class="gallery shade">
               <div class="gallery-item">
-                <div class="gallery-image" style={{backgroundImage: 'url(../' + content.images[index] + ')'}}/>
+                <div class="gallery-image" style={{backgroundImage: `url(${image})`}}/>
               </div>
             </div>
           </div>
           <div class="grid-item grid-4 portable-grid-12 portable-grid-v-6 card card-sidebar card-no-hover scroll">
             <h3>{content.title}</h3>
-            <p>{content.info}</p>
+            <p>{content.body}</p>
           </div>
         </div>
       </div>

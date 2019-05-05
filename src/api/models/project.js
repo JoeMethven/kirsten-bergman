@@ -4,7 +4,8 @@ const projectSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     title: String,
     body: String,
-    images: [{ url: String, text: String }]
+    created: Date,
+    images: [{ contentType: String, data: Buffer }]
 });
 
 export default mongoose.model('Project', projectSchema);

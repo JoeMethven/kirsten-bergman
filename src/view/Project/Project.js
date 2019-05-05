@@ -1,18 +1,37 @@
 import React from 'react';
 
 import Item from './Item';
-import ProjectStore from "../../app/stores/ProjectStore";
 
 class Project extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: null
+    };
+  }
+
+  componentWillMount() {
+    fetch(`/api/projects/${this.props.match.params.id}`)
+        .then(res => res.json())
+        .then(json => {
+          console.log('json', json);
+
+          this.setState({
+            data: json
+          })
+        });
+  }
+
   render() {
-    const projectId = this.props.match.params.id,
-          project = ProjectStore.getProjectFromId(projectId);
+    let item = null;
 
-    console.log('projectId', projectId, project);
+    console.log('this.state.data', this.state.data);
 
-    return (
-      <Item key={projectId} content={project} />
-    );
+    if (this.state.data) {
+      item = <Item key={this.props.match.params.id} content={this.state.data} />;
+    }
+
+    return item;
   }
 }
 

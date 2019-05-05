@@ -13,7 +13,6 @@ import api from './src/api';
 
 const dev = process.env.NODE_ENV === 'development' ? true : false;
 const app = express();
-
 mongoose.connect('mongodb://localhost:27017/kirstenbergman', { useNewUrlParser: true });
 
 // log to console when requests are made
