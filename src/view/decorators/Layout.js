@@ -9,6 +9,7 @@ import Gallery from '../../view/Gallery/Gallery'
 import Navigation from '../../components/Navigation/Navigation'
 import Project from '../../view/Project/Project'
 import Literature from '../../view/Literature/Literature'
+import NoMatch from './NoMatch';
 
 class Layout extends React.Component {
   render() {
@@ -29,6 +30,7 @@ class Layout extends React.Component {
               <Route path="/literature" component={Literature} />
               <Route path="/about" component={About} />
               <Route path="/edit/:id" component={Form} />
+              <Route component={NoMatch} />
             </Switch>
           </div>
         </div>

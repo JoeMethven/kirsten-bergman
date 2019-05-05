@@ -1,10 +1,11 @@
+import path from 'path';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import HTMLWebpackPlugin from 'html-webpack-plugin';
+
 const debug = process.env.NODE_ENV !== 'production';
-const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const HTMLWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
-  entry: path.resolve(__dirname, 'src/app/client.js'),
+  entry: path.resolve(__dirname, 'src/client.js'),
   output: {
     path: path.resolve(__dirname, 'public'),
     filename: 'client.min.js',
@@ -12,8 +13,8 @@ const config = {
   },
   mode: debug ? 'development' : 'production',
   devServer: {
-    host: '0.0.0.0',
-    contentBase: './public',
+    // host: '0.0.0.0',
+    // contentBase: './public',
     hot: true,
     stats: {
       errorDetails: true
@@ -92,4 +93,4 @@ const config = {
   ]
 };
 
-module.exports = config;
+export default config;
