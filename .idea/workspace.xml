@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9b0be46-dfce-4300-b9f9-a2e4c3e3f2d2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/api/routes/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Project/Project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Projects/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Projects/Create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Projects/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Projects/Projects.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/stores/ProjectStore.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,20 +15,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/decorators/Layout.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="51" column="51" lean-forward="true" selection-start-line="51" selection-start-column="51" selection-end-line="51" selection-end-column="51" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-                <element signature="e#138#180#0" expanded="true" />
-                <marker date="1557100082211" expanded="true" signature="78:136" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Navigation/Navigation.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,8 +96,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/api/routes/projects.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="678">
-              <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+            <state relative-caret-position="453">
+              <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -253,25 +236,6 @@
               <item name="kirsten-bergman" type="b2602c69:ProjectViewProjectNode" />
               <item name="kirsten-bergman" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kirsten-bergman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kirsten-bergman" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kirsten-bergman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kirsten-bergman" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kirsten-bergman" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kirsten-bergman" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -335,12 +299,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555712592040</updated>
       <workItem from="1555712593333" duration="1652000" />
-      <workItem from="1556564215590" duration="60909000" />
+      <workItem from="1556564215590" duration="61118000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62561000" />
+    <option name="totallyTimeSpent" value="62770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -480,13 +444,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/img/f87916cf5407ba45a819e5ae329ae67f1557062375472.jpeg">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/data/projects.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="30" column="4" lean-forward="true" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -719,10 +676,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/data/projects.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="32" column="12" lean-forward="true" selection-end-line="62" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/routes/projects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="678">
-          <caret line="75" column="49" selection-start-line="75" selection-start-column="49" selection-end-line="75" selection-end-column="49" />
+        <state relative-caret-position="453">
+          <caret line="64" column="10" lean-forward="true" selection-start-line="64" selection-start-column="10" selection-end-line="64" selection-end-column="10" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
