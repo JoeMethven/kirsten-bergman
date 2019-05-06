@@ -5,9 +5,9 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 const debug = process.env.NODE_ENV !== 'production';
 
 const config = {
-  entry: path.resolve(__dirname, 'src/client.js'),
+  entry: path.resolve(__dirname, './index.js'),
   output: {
-    path: path.resolve(__dirname, 'public'),
+    path: path.resolve(__dirname, '../../public'),
     filename: 'client.min.js',
     publicPath: '/'
   },
@@ -21,7 +21,7 @@ const config = {
     }
   },
   resolve: {
-    modules: [path.resolve(__dirname, 'public'), 'node_modules']
+    modules: [path.resolve(__dirname, '../../public'), 'node_modules']
   },
   module: {
     rules: [
@@ -84,7 +84,7 @@ const config = {
   },
   plugins: [
     new CopyWebpackPlugin([
-      { from: path.resolve(__dirname, 'src/img'), to: path.resolve(__dirname, 'public/img') }
+      { from: path.resolve(__dirname, 'img'), to: path.resolve(__dirname, '../../public/img') }
     ]),
     new HTMLWebpackPlugin({
       template: './src/index.html',

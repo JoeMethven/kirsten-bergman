@@ -37,6 +37,6 @@
   "scripts": {
     "dev": "rm -rf public && NODE_ENV=development babel-node server.js",
     "prod": "npm run build && NODE_ENV=production node public/server.js",
-    "build": "rm -rf public && webpack --mode production --config webpack.config.js && NODE_ENV=production node_modules/@babel/cli/bin/babel.js server.js -d public"
+    "build": "rm -rf public && webpack --mode production --config src/client/webpack.config.js && NODE_ENV=production node_modules/@babel/cli/bin/babel.js server.js -d public"
   }
 }

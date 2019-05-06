@@ -2,14 +2,14 @@ import React from 'react'
 import { Route, Switch } from 'react-router-dom'
 // import Transition from 'react-addons-css-transition-group'
 
-import About from '../../view/About/About'
-import Featured from '../../view/Featured/Featured'
-import Form from '../../view/Project/Form'
-import Projects from '../../view/Projects/Projects'
-import ProjectsCreate from '../../view/Projects/Create';
+import About from '../About/About'
+import Featured from '../Featured/Featured'
+import Form from '../Project/Form'
+import Projects from '../Projects/Projects'
+import ProjectsCreate from '../Projects/Create';
 import Navigation from '../../components/Navigation/Navigation'
-import Project from '../../view/Project/Project'
-import Literature from '../../view/Literature/Literature'
+import Project from '../Project/Project'
+import Literature from '../Literature/Literature'
 import NoMatch from './NoMatch';
 
 class Layout extends React.Component {

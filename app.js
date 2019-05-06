@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfig from './webpack.config.js';
+import webpackConfig from './src/client/webpack.config.js';
 import morgan from 'morgan';
 import history from 'connect-history-api-fallback';
 import path from 'path';
