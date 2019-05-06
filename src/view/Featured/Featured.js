@@ -22,13 +22,13 @@ class Featured extends React.Component {
   }
 
   navigate(id) {
-    this.props.history.push('/gallery/' + id);
+    this.props.history.push('/projects/' + id);
   }
 
   render() {
     return (
-      <div class="gallery">
-        <Slider className="gallery-item" controls={false} transition={true} content={this.state.projects} clicked={this.navigate} />
+      <div class='feature'>
+        <Slider controls={false} transition={true} content={this.state.projects} clicked={this.navigate} />
       </div>
     )
   }

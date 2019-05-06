@@ -1,15 +1,15 @@
 import React from 'react'
-import Transition from 'react-addons-css-transition-group'
+import { CSSTransition } from 'react-transition-group';
 import PropTypes from 'prop-types'
 
 import Item from './Item'
 
 class Slider extends React.Component {
   constructor() {
-    super()
+    super();
 
-    this.previousItem = this.previousItem.bind(this)
-    this.nextItem = this.nextItem.bind(this)
+    this.previousItem = this.previousItem.bind(this);
+    this.nextItem = this.nextItem.bind(this);
 
     this.state = {
       itemIndex: 0,
@@ -72,27 +72,25 @@ class Slider extends React.Component {
   }
 
   render() {
-    const { content, controls, clicked, className } = this.props,
+    const { content, clicked } = this.props,
           index = this.state.itemIndex,
-          classes = className || '',
           clickClass = clicked ? ' clickable' : '';
 
-    let addControls = null;
+    let controls = null;
 
     if (!content.length) {
       return null;
     }
 
-    if (controls) {
-      addControls = this.addControls();
+    if (this.props.controls) {
+      controls = this.addControls();
     }
 
     return (
-      <div class={classes + clickClass}>
+      <div class={`slider ${clickClass}`}>
         {controls}
-        <Transition transitionName="gallery" transitionAppear={true} transitionAppearTimeout={500} transitionEnterTimeout={1000} transitionLeaveTimeout={1100}>
-          <Item key={content[index]._id} content={content[index]} clicked={clicked} />
-        </Transition>
+
+        <Item key={content[index]._id} content={content[index]} clicked={clicked} />
       </div>
     )
   }

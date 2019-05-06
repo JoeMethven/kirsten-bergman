@@ -1,0 +1,36 @@
+.actions
+  position: absolute
+  top: $dsu
+  left: $dsu
+  height: 50px
+  z-index: 1
+
+  .action-icon
+    position: relative
+    cursor: pointer
+    //transition: opacity ease-in .2s
+    height: 50px
+    width: 50px
+    border-radius: 50%
+    background: $white
+    display: inline-block
+    text-align: center
+    vertical-align: middle
+    margin-right: $bsu
+    box-shadow: 0 0px 16px rgba(0, 0, 0, 0.3), 0 4px 5px rgba(0, 0, 0, 0.3)
+    transition: background ease-in .3s
+
+    .fa
+      font-size: 20px
+      height: 20px
+      width: 20px
+      margin: auto
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+
+    &:hover
+      background: $white-gray;
+      opacity: 1;

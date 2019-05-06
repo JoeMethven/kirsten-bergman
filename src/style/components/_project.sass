@@ -1,0 +1,25 @@
+.project
+  display: grid
+  grid-template-areas: 'image' 'details'
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr 1fr
+  height: 100%
+
+  @media screen and (min-width: 1024px)
+    grid-template-areas: 'image details'
+    grid-template-columns: 2fr 1fr
+    grid-template-rows: 1fr
+
+  .project-image
+    grid-area: image
+
+    > div
+      background-size: cover
+      height: 100%
+      width: 100%
+      display: block
+      background-position: center
+      background-repeat: no-repeat
+
+  .project-details
+    grid-area: details

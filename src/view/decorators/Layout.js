@@ -1,38 +1,61 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import Transition from 'react-addons-css-transition-group'
+// import Transition from 'react-addons-css-transition-group'
 
 import About from '../../view/About/About'
 import Featured from '../../view/Featured/Featured'
 import Form from '../../view/Project/Form'
-import Gallery from '../../view/Gallery/Gallery'
+import Projects from '../../view/Projects/Projects'
+import ProjectsCreate from '../../view/Projects/Create';
 import Navigation from '../../components/Navigation/Navigation'
 import Project from '../../view/Project/Project'
 import Literature from '../../view/Literature/Literature'
 import NoMatch from './NoMatch';
 
 class Layout extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      offsetTop: null,
+      resize: null
+    }
+  }
+
+  componentDidMount() {
+    const fn = () => this.refs.content.style.height = `calc(100vh - ${this.refs.content.getBoundingClientRect().top}px)`;
+
+    fn();
+    window.addEventListener('resize', fn);
+
+    this.setState({
+      resize: fn
+    })
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener(this.state.resize);
+  }
+
   render() {
     return (
       <div>
-        <div class="row" id="header">
+        <div id="header">
           <h1>Kirsten Bergman</h1>
           <Navigation />
         </div>
 
-        <div class="grid row" id="content">
-          <div class="grid-item grid-12">
-            <Switch>
-              <Route exact path="/" component={Featured} />
-              <Route path="/gallery/:id" component={Project} />
-              <Route path="/gallery" component={Gallery} />
-              <Route path="/literature/:id" component={Project} />
-              <Route path="/literature" component={Literature} />
-              <Route path="/about" component={About} />
-              <Route path="/edit/:id" component={Form} />
-              <Route component={NoMatch} />
-            </Switch>
-          </div>
+        <div id="content" ref="content">
+          <Switch>
+            <Route exact path="/" component={Featured} />
+            <Route path="/projects/create" component={ProjectsCreate} />
+            <Route path="/projects/:id" component={Project} />
+            <Route path="/projects" component={Projects} />
+            <Route path="/literature/:id" component={Project} />
+            <Route path="/literature" component={Literature} />
+            <Route path="/about" component={About} />
+            <Route path="/edit/:id" component={Form} />
+            <Route component={NoMatch} />
+          </Switch>
         </div>
       </div>
     )

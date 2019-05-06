@@ -18,6 +18,8 @@ h1
   letter-spacing: 2px
   font-size: 1.80em
   line-height: 100%
+  margin-top: -5px
+
   +media-query(palm)
     font-size: 1.60em
 
@@ -33,7 +35,16 @@ h1, h2, h3
 
 h1, h2, h3, h4, h5, h6
   line-height: 120%
-  margin-bottom: $hsu
+  margin-bottom: $bsu
+  +flex()
+  +flexDir(row)
+  text-transform: uppercase
+
+  > div
+    flex-grow: 1
+
+  > span
+    font-variant-numeric: lining-nums
 
 a
   color: $black
@@ -48,6 +59,7 @@ a
 
 p
   @extend %font-regular
+  white-space: pre-wrap
 
 i.fa
   font-size: 1.25em

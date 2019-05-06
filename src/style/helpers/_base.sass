@@ -1,7 +1,7 @@
 html
   background: $white
 
-html, body, #app, #app > div, #content, #content > div, #header
+html, body, #content, #header
   margin: 0
   padding: 0
   overflow-y: hidden
@@ -11,43 +11,11 @@ body.no-scroll
   overflow-y: hidden
   overflow-x: hidden
 
-div
-  height: inherit
-
-#app > div
-  height: 100vh
-  display: inline-block
-  width: 100%
-
-  > *
-    margin-top: 0
-
-#content, .horizontal
-  height: 90vh;
-  max-height: calc(100vh - 70px);
-
-  > *
-    margin-top: 0
-
-  // adjust page to 100vh maximum
-  > *, > * > *, > * > span > *
-    max-height: inherit
-    height: inherit
-    overflow-y: hidden
-    position: relative
+#content
+  position: relative
 
 .scroll
   overflow-y: auto
-
-// horizontal scrolling pages
-.horizontal
-  overflow-x: auto
-  white-space: nowrap
-  +media-query(portable)
-    margin-top: 0!important
-
-  > *
-    white-space: normal
 
 // Lists
 ul
@@ -60,20 +28,3 @@ ul
 .clickable
   &, *
     cursor: pointer
-
-.gallery .project
-  margin: $bsu 0;
-  padding: 0!important
-  height: calc(90vh - 40px);
-  max-height: calc(100vh - 110px);
-
-i.project-icon
-  position: absolute
-  font-size: 1.75em
-  top: $dsu
-  left: $dsu;
-  cursor: pointer
-  transition: opacity ease-in .2s
-
-  &:hover
-    opacity: 0.5

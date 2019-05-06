@@ -4,7 +4,8 @@ const projectSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
     title: String,
     body: String,
-    created: Date,
+    created: { original: String, formatted: String },
+    excerpt: String,
     images: [{ contentType: String, data: Buffer }]
 });
 

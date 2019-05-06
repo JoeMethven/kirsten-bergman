@@ -1,6 +1,5 @@
 import React from 'react';
-
-import Item from './Item';
+import { Link } from "react-router-dom";
 
 class Project extends React.Component {
   constructor() {
@@ -23,15 +22,39 @@ class Project extends React.Component {
   }
 
   render() {
-    let item = null;
+    const { data } = this.state;
 
-    console.log('this.state.data', this.state.data);
+    let project = null;
+    let actions = null;
+    let editable = true;
+    let deletable = true;
 
     if (this.state.data) {
-      item = <Item key={this.props.match.params.id} content={this.state.data} />;
+      const image = `data:${data.images[0].contentType};base64,${data.images[0].data}`;
+      const editAction = <Link to={'edit/' + data._id} class="action-icon"><div class="fa fa-pencil"></div></Link>;
+        const deleteAction = <Link to={'delete/' + data._id} class="action-icon"><div class="fa fa-trash"></div></Link>;
+
+      if (editable || deletable) {
+        actions = <div class="actions">{editAction}{deleteAction}</div>
+      }
+
+      project = (
+          <div className="project">
+            {actions}
+            <div className="project-image">
+              <div style={{backgroundImage: `url(${image})`}}></div>
+            </div>
+            <div className="project-details card card-sidebar card-no-hover scroll">
+              <h3>
+                <div>{data.title}</div>
+                <span>{data.created.formatted}</span></h3>
+              <p>{data.body}</p>
+            </div>
+          </div>
+      );
     }
 
-    return item;
+    return project;
   }
 }
 

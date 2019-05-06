@@ -10,7 +10,7 @@ class Navigation extends React.Component {
             <NavLink exact to="/" activeClassName="active"><i class="fa fa-heart"></i></NavLink>
           </li>
           <li>
-            <NavLink to="/gallery" activeClassName="active"><i class="fa fa-photo"></i></NavLink>
+            <NavLink to="/projects" activeClassName="active"><i class="fa fa-photo"></i></NavLink>
           </li>
           <li>
             <NavLink to="/literature" activeClassName="active"><i class="fa fa-pencil"></i></NavLink>
