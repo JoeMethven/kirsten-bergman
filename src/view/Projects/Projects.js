@@ -30,9 +30,9 @@ export default class Projects extends React.Component {
     if (creatable) {
       createAction = (
         <div class="actions">
-          <div className="action-icon">
-            <Link to={'projects/create'} class="fa fa-plus" />
-          </div>
+          <Link to={'projects/create'} className="action-icon">
+            <i class="fa fa-plus" />
+          </Link>
         </div>
       )
     }

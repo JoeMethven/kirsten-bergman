@@ -21,6 +21,14 @@ class Project extends React.Component {
         });
   }
 
+  deleteProject() {
+      fetch(`/api/projects/delete/${this.state.data._id}`, {
+          method: 'DELETE'
+      }).then(res => {
+          history.back();
+      }).catch(err => new Error(err));
+  }
+
   render() {
     const { data } = this.state;
 
@@ -32,7 +40,7 @@ class Project extends React.Component {
     if (this.state.data) {
       const image = `data:${data.images[0].contentType};base64,${data.images[0].data}`;
       const editAction = <Link to={'edit/' + data._id} class="action-icon"><div class="fa fa-pencil"></div></Link>;
-        const deleteAction = <Link to={'delete/' + data._id} class="action-icon"><div class="fa fa-trash"></div></Link>;
+        const deleteAction = <div onClick={this.deleteProject.bind(this)} class="action-icon"><div class="fa fa-trash"></div></div>;
 
       if (editable || deletable) {
         actions = <div class="actions">{editAction}{deleteAction}</div>

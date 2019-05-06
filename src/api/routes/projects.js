@@ -66,12 +66,15 @@ router.patch('/:projectId', (req, res, next) => {
     })
 });
 
-router.delete('/:projectId', (req, res, next) => {
+router.delete('/delete/:projectId', (req, res, next) => {
     const id = req.params.projectId;
 
-    res.status(200).json({
-        message: 'handling DELETE requests to /projects/:projectId',
-        id
+    Project.remove({ _id: id }, (err) => {
+        if (!err) {
+            res.status(200).json({});
+        } else {
+            res.status(500).json({ error: err });
+        }
     })
 });
 
