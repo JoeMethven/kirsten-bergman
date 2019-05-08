@@ -6,7 +6,7 @@ const projectSchema = mongoose.Schema({
     body: String,
     created: { original: String, formatted: String },
     excerpt: String,
-    images: [{ contentType: String, data: Buffer }]
+    images: [{ contentType: String, data: Buffer, key: String, position: Number }]
 });
 
 export default mongoose.model('Project', projectSchema);

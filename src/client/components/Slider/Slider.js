@@ -64,10 +64,11 @@ class Slider extends React.Component {
 
   addControls() {
     return (
-      <div>
-        <i class="fa fa-chevron-left left" onClick={this.previousItem} />
-        <i class="fa fa-chevron-right right" onClick={this.nextItem} />
-      </div>
+      <ul class="slider-controls">
+        { this.props.content.map((item, index) => (
+          <li key={item.id} onClick={() => this.setState({itemIndex: index})} />
+        )) }
+      </ul>
     )
   }
 
@@ -90,7 +91,7 @@ class Slider extends React.Component {
       <div class={`slider ${clickClass}`}>
         {controls}
 
-        <Item key={content[index]._id} content={content[index]} clicked={clicked} />
+        <Item key={content[index].id} id={content[index].id} image={content[index].image} clicked={clicked} />
       </div>
     )
   }

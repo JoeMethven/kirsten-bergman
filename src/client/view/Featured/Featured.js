@@ -26,9 +26,14 @@ class Featured extends React.Component {
   }
 
   render() {
+    const data = this.state.projects.map(project => ({
+      id: project._id,
+      image: `data:${project.images[0].contentType};base64,${project.images[0].data}`
+    }));
+
     return (
       <div class='feature'>
-        <Slider controls={false} transition={true} content={this.state.projects} clicked={this.navigate} />
+        <Slider controls={false} transition={true} content={data} clicked={this.navigate} />
       </div>
     )
   }

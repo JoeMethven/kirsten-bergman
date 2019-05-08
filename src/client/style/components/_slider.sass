@@ -1,6 +1,31 @@
 .slider
+  position: relative
+
   &, *
     height: 100%
+
+  ul.slider-controls
+    position: absolute
+    height: auto
+    bottom: $bsu
+    left: 50%
+    transform: translateX(-50%)
+
+    li
+      height: 20px
+      width: 20px
+      margin-right: $hsu
+      border-radius: 50%
+      box-shadow: 0 0px 16px rgba(0, 0, 0, 0.3), 0 4px 5px rgba(0, 0, 0, 0.3)
+      display: inline-block
+      background: $white
+      z-index: 1
+      transition: background ease-in .3s, transform ease-in .3s
+      cursor: pointer
+
+      &:hover
+        transform: scale(0.95)
+        background: $white-gray
 
   .slider-item
     background-size: cover

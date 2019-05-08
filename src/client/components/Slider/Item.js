@@ -12,11 +12,11 @@ class Item extends React.Component {
   }
 
   render() {
-    const { content } = this.props,
-          image = `data:${content.images[0].contentType};base64,${content.images[0].data}`;
+    const { id, image, clicked } = this.props,
+          clickedFn = typeof clicked === 'function' ? () => clicked(id) : null;
 
     return (
-      <span class="slider-item" style={{backgroundImage: `url(${image})`}} onClick={this.itemClicked.bind(this, content._id)}/>
+      <span class="slider-item" style={{backgroundImage: `url(${image})`}} onClick={clickedFn}/>
     )
   }
 }

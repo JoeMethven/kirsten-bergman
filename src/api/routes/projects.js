@@ -6,15 +6,18 @@ import moment from 'moment';
 import Project from '../models/project';
 
 const router = express.Router();
-const upload = multer({ storage: multer.memoryStorage() });
+// const upload = multer({ storage: multer.memoryStorage() });
 
 router.get('/', (req, res, next) => {
     Project.find().lean().exec(function (err, projects) {
+        console.log('getting projects', projects);
         return res.status(200).json(projects);
     });
 });
 
-router.post('/', upload.array('images', 4), (req, res, next) => {
+router.post('/', (req, res, next) => {
+    // console.log("req.body.images", req.body.images);
+
     const project = new Project({
         _id: mongoose.Types.ObjectId(),
         title: req.body.title,
@@ -24,11 +27,13 @@ router.post('/', upload.array('images', 4), (req, res, next) => {
             original: new Date(Date.now()).toISOString(),
             formatted: moment(new Date(Date.now()).toISOString()).format('DD-MM-YY')
         },
-        images: req.files.map(file => ({
-            contentType: file.mimetype,
-            data: new Buffer(file.buffer.toString('base64'), 'base64')
-        }))
+        images: req.body.images.sort((a, b) => a.position < b.position ? 1 : -1).map(image => {
+            image.data = Buffer.from(image.data, 'base64');
+            return image;
+        })
     });
+
+    // console.log('POSTED PROJECT', project);
 
     project
         .save()
@@ -43,8 +48,6 @@ router.post('/', upload.array('images', 4), (req, res, next) => {
 });
 
 router.get('/:projectId', (req, res, next) => {
-    console.log('req.params.projectId', req.params.projectId);
-
     Project.findById(req.params.projectId)
         .lean()
         .exec()
@@ -58,12 +61,29 @@ router.get('/:projectId', (req, res, next) => {
 });
 
 router.patch('/:projectId', (req, res, next) => {
-    const id = req.params.projectId;
+    Project.findById(req.params.projectId, (error, doc) => {
+        doc.title = req.body.title || doc.title;
 
-    res.status(200).json({
-        message: 'handling PATCH requests to /projects/:projectId',
-        id
-    })
+        if (req.body.body !== doc.body) {
+            doc.excerpt = `${req.body.body.split(' ').splice(0, 15).join(' ')}...`;
+        }
+
+        doc.body = req.body.body || doc.body;
+        doc.images = req.body.images.map(image => {
+            image.data = Buffer.from(image.data, 'base64');
+            return image;
+        });
+
+        doc.save((err, docs) => {
+           if (error) {
+               res.status(500).json({ error: err });
+           } else {
+               res.status(200).json({});
+           }
+
+           return next();
+        });
+    });
 });
 
 router.delete('/delete/:projectId', (req, res, next) => {

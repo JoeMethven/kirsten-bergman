@@ -1,15 +1,15 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 // import Transition from 'react-addons-css-transition-group'
 
-import About from '../About/About'
-import Featured from '../Featured/Featured'
-import Form from '../Project/Form'
-import Projects from '../Projects/Projects'
-import ProjectsCreate from '../Projects/Create';
-import Navigation from '../../components/Navigation/Navigation'
-import Project from '../Project/Project'
-import Literature from '../Literature/Literature'
+import About from '../About/About';
+import Featured from '../Featured/Featured';
+import Projects from '../Projects/Projects';
+import ProjectsCreate from '../Project/Create';
+import ProjectEdit from '../Project/Edit';
+import Navigation from '../../components/Navigation/Navigation';
+import Project from '../Project/Project';
+import Literature from '../Literature/Literature';
 import NoMatch from './NoMatch';
 
 class Layout extends React.Component {
@@ -48,12 +48,12 @@ class Layout extends React.Component {
           <Switch>
             <Route exact path="/" component={Featured} />
             <Route path="/projects/create" component={ProjectsCreate} />
+            <Route path="/projects/edit/:id" component={ProjectEdit} />
             <Route path="/projects/:id" component={Project} />
             <Route path="/projects" component={Projects} />
             <Route path="/literature/:id" component={Project} />
             <Route path="/literature" component={Literature} />
             <Route path="/about" component={About} />
-            <Route path="/edit/:id" component={Form} />
             <Route component={NoMatch} />
           </Switch>
         </div>

@@ -23,7 +23,7 @@ app.use(express.static(path.resolve(__dirname, 'public')));
 
 // tell server to use json format
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(bodyParser.json({ limit: '10mb' }));
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');

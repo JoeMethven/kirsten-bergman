@@ -3,6 +3,18 @@
 form
   display: block
 
+  ul
+    display: grid
+    grid-auto-rows: 30vh
+    grid-template-columns: 1fr 1fr 1fr 1fr
+
+    li
+      background-size: cover
+      height: 100%
+      width: 100%
+      background-position: center
+      background-repeat: no-repeat
+
 input, textarea
   @extend %font-bold
   font-size: 1em
@@ -36,28 +48,3 @@ button
   @extend a
   +media-query(laptop)
     font-size: 0.90em
-
-// Social Icons
-* + .social
-  padding-left: $ssu
-
-.social
-  display: block
-  i
-    +transition(color, ease-in, .3s)
-    color: lighten($gray, 15)
-    padding-top: $ssu
-    padding-right: $hsu
-    cursor: hand
-    cursor: pointer
-    &:hover
-      color: $green
-
-    +media-query(portable)
-      padding-right: $ssu
-
-  &.social--alternate
-    i
-      color: $dark-green
-      &:hover
-        color: $white
