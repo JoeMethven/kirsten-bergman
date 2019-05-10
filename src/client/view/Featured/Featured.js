@@ -33,7 +33,7 @@ class Featured extends React.Component {
 
     return (
       <div class='feature'>
-        <Slider controls={false} transition={true} content={data} clicked={this.navigate} />
+        <Slider controls={false} transition={true} items={data} clicked={this.navigate} />
       </div>
     )
   }

@@ -10,38 +10,52 @@ class Slider extends React.Component {
 
     this.previousItem = this.previousItem.bind(this);
     this.nextItem = this.nextItem.bind(this);
+    this.startTransition = this.startTransition.bind(this);
+    this.endTransition = this.endTransition.bind(this);
 
     this.state = {
       itemIndex: 0,
-      timeout: null
+      transitionInterval: null,
+      controlTimeout: null
     }
   }
 
   componentDidMount() {
-    if (this.props.transition) {
-      this.loopItems(this.state.itemIndex)
-    }
+    this.startTransition();
   }
 
   componentWillUnmount() {
-    clearTimeout(this.state.timeout)
+    this.endTransition();
+    this.endControlTimeout();
   }
 
-  loopItems() {
-    const { content } = this.props
+  // loopItems() {
+  //   const { content } = this.props
+  //
+  //   let index = this.state.itemIndex
+  //
+  //   index++
+  //   if (typeof content[index] === 'undefined') index = 0
+  //
+  //   this.setState({
+  //     timeout: setTimeout(() => {
+  //       this.setState({itemIndex: index})
+  //
+  //       this.loopItems(this.state.itemIndex)
+  //     }, this.props.slideDuration)
+  //   })
+  // }
 
-    let index = this.state.itemIndex
+  endTransition() {
+    if (this.props.transition) {
+      clearInterval(this.state.transitionInterval);
+    }
+  }
 
-    index++
-    if (typeof content[index] === 'undefined') index = 0
-
-    this.setState({
-      timeout: setTimeout(() => {
-        this.setState({itemIndex: index})
-
-        this.loopItems(this.state.itemIndex)
-      }, this.props.slideDuration)
-    })
+  startTransition() {
+    if (this.props.transition) {
+      this.setState({ transitionInterval: setInterval(this.nextItem, this.props.sliderDuration) });
+    }
   }
 
   previousItem() {
@@ -54,32 +68,50 @@ class Slider extends React.Component {
   }
 
   nextItem() {
+    console.log("nextItem", this.state.itemIndex);
     let index = this.state.itemIndex + 1
-    if (index > this.state.items.length) index = 0
+    if (index >= this.props.items.length) index = 0
 
     this.setState({
       itemIndex: index
     })
   }
 
+  endControlTimeout() {
+    clearTimeout(this.state.controlTimeout);
+  }
+
+  controlClicked(index) {
+    this.endTransition();
+
+    clearTimeout(this.state.controlTimeout);
+
+    this.setState({
+      itemIndex: index,
+      controlTimeout: setTimeout(() => {
+        if (this.state.itemIndex === index) this.startTransition();
+      }, this.props.sliderDuration)
+    });
+  }
+
   addControls() {
     return (
       <ul class="slider-controls">
-        { this.props.content.map((item, index) => (
-          <li key={item.id} onClick={() => this.setState({itemIndex: index})} />
+        { this.props.items.map((item, index) => (
+          <li key={item.id} onClick={() => this.controlClicked(index)} />
         )) }
       </ul>
     )
   }
 
   render() {
-    const { content, clicked } = this.props,
+    const { items, clicked } = this.props,
           index = this.state.itemIndex,
           clickClass = clicked ? ' clickable' : '';
 
     let controls = null;
 
-    if (!content.length) {
+    if (!items.length) {
       return null;
     }
 
@@ -87,22 +119,30 @@ class Slider extends React.Component {
       controls = this.addControls();
     }
 
+    console.log("index", index);
+    console.log("items[index]", items[index]);
+
     return (
       <div class={`slider ${clickClass}`}>
         {controls}
 
-        <Item key={content[index].id} id={content[index].id} image={content[index].image} clicked={clicked} />
+        <Item key={items[index].id} id={items[index].id} image={items[index].image} clicked={clicked} />
       </div>
     )
   }
 }
 
 Slider.propTypes = {
-  slideDuration: PropTypes.number
+  sliderDuration: PropTypes.number,
+  transition: PropTypes.bool,
+  items: PropTypes.array.isRequired,
+  controls: PropTypes.bool
 }
 
 Slider.defaultProps = {
-  slideDuration: 5000
+  sliderDuration: 5000,
+  transition: true,
+  controls: false
 }
 
 export default Slider

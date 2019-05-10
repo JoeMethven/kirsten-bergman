@@ -2,21 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d9b0be46-dfce-4300-b9f9-a2e4c3e3f2d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/client/view/Project/Edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/models/project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/models/project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/routes/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/routes/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/components/Slider/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/Slider/Item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/components/Slider/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/components/Slider/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/style/components/_form.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/style/components/_form.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/style/components/_slider.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/style/components/_slider.sass" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/style/helpers/_vars.sass" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/style/helpers/_vars.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/view/Featured/Featured.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/Featured/Featured.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/Project/Form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/view/Project/Create.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/client/view/Project/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/Project/Form.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/view/Project/Project.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/Project/Project.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/Projects/Create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/Project/Create.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/client/view/Projects/Item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/Projects/Item.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/client/view/decorators/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/view/decorators/Layout.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,20 +23,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/client/view/Project/Create.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/view/decorators/Layout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="35" column="69" lean-forward="true" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+            <state relative-caret-position="-87">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#140#175#0" expanded="true" />
+                <marker date="1557424483556" expanded="true" signature="80:138" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/view/Project/Edit.js">
+        <entry file="file://$PROJECT_DIR$/src/client/view/Project/Project.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="50" column="69" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="69" />
+            <state relative-caret-position="260">
+              <caret line="48" column="40" lean-forward="true" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/view/Project/Form.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="243">
+              <caret line="149" column="33" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/style/components/_form.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="426">
+              <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/style/helpers/_vars.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -51,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/api/routes/projects.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="60" column="3" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
+            <state relative-caret-position="514">
+              <caret line="71" column="40" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="40" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -61,31 +89,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/api/models/project.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/view/Project/Project.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-12">
-              <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/client/components/Slider/Slider.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="77" column="34" lean-forward="true" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
+            <state relative-caret-position="-762">
+              <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -94,47 +101,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/style/components/_slider.sass">
+        <entry file="file://$PROJECT_DIR$/src/client/style/components/_action.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
+            <state relative-caret-position="240">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/view/Featured/Featured.js">
+        <entry file="file://$PROJECT_DIR$/src/client/style/helpers/_typography.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="89" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="89" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/view/Projects/Projects.js">
+        <entry file="file://$PROJECT_DIR$/src/client/style/components/_card.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/client/view/decorators/Layout.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="53" column="55" lean-forward="true" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-                <marker date="1557344970126" expanded="true" signature="80:138" ph="..." />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -143,36 +131,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>image</find>
-      <find>.data.</find>
-      <find>defaultValue</find>
-      <find>.images</find>
-      <find>existing</find>
-      <find>removeimage</find>
-      <find>font-awesome</find>
-      <find>req.files</find>
-      <find>patch</find>
-      <find>background-</find>
-      <find>&lt;Slider</find>
-      <find>save</find>
-      <find>binary</find>
-      <find>base64</find>
-      <find>console.log</find>
-      <find>data</find>
-      <find>content</find>
-      <find>btoa</find>
-      <find>conto</find>
+      <find>endTransition</find>
+      <find>$base-round</find>
+      <find>border-r</find>
       <find>box-shadow</find>
-      <find>SPLIT</find>
-      <find>upload</find>
-      <find>removeim</find>
-      <find>removei</find>
-      <find>arrayBufferToBase64</find>
-      <find>key</find>
-      <find>data.slice</find>
-      <find>removedIma</find>
-      <find>.patch</find>
-      <find>removedImages</find>
+      <find>0 0px 16px rgba(0, 0, 0, 0.3), 0 4px 5px rgba(0, 0, 0, 0.3)</find>
+      <find>renumber the</find>
+      <find>key =</find>
+      <find>key:</find>
+      <find>.empty</find>
+      <find>file</find>
+      <find>margin</find>
+      <find>keyup</find>
+      <find>.map</find>
+      <find>images</find>
+      <find>im</find>
+      <find>image-empt</find>
+      <find>removeimage</find>
+      <find>removeImage</find>
+      <find>console.log('</find>
+      <find>submit(</find>
+      <find>sort</find>
+      <find>slider</find>
+      <find>textarea</find>
+      <find>this.ref</find>
+      <find>project-form</find>
+      <find>padding</find>
+      <find>.actions</find>
+      <find>action</find>
+      <find>box-sh</find>
+      <find>cursor</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -188,8 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/assets/style/components/_gallery.sass" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/src/client.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/view/decorators/NoMatch.js" />
@@ -225,20 +211,22 @@
         <option value="$PROJECT_DIR$/src/client/index.js" />
         <option value="$PROJECT_DIR$/src/client/style/thirdparty/_all.sass" />
         <option value="$PROJECT_DIR$/src/client/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/client/style/components/_form.sass" />
-        <option value="$PROJECT_DIR$/src/client/view/Featured/Featured.js" />
         <option value="$PROJECT_DIR$/src/client/components/Slider/Item.js" />
-        <option value="$PROJECT_DIR$/src/client/view/decorators/Layout.js" />
         <option value="$PROJECT_DIR$/src/client/view/Projects/Projects.js" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/src/client/view/Projects/Item.js" />
-        <option value="$PROJECT_DIR$/src/client/view/Project/Project.js" />
-        <option value="$PROJECT_DIR$/src/client/components/Slider/Slider.js" />
         <option value="$PROJECT_DIR$/src/client/style/components/_slider.sass" />
         <option value="$PROJECT_DIR$/src/api/routes/projects.js" />
         <option value="$PROJECT_DIR$/src/api/models/project.js" />
-        <option value="$PROJECT_DIR$/src/client/view/Project/Edit.js" />
         <option value="$PROJECT_DIR$/src/client/view/Project/Create.js" />
+        <option value="$PROJECT_DIR$/src/client/view/Project/Edit.js" />
+        <option value="$PROJECT_DIR$/src/client/view/decorators/Layout.js" />
+        <option value="$PROJECT_DIR$/src/client/view/Featured/Featured.js" />
+        <option value="$PROJECT_DIR$/src/client/view/Project/Project.js" />
+        <option value="$PROJECT_DIR$/src/client/components/Slider/Slider.js" />
+        <option value="$PROJECT_DIR$/src/client/style/helpers/_vars.sass" />
+        <option value="$PROJECT_DIR$/src/client/view/Project/Form.js" />
+        <option value="$PROJECT_DIR$/src/client/style/components/_form.sass" />
       </list>
     </option>
   </component>
@@ -291,6 +279,29 @@
               <item name="kirsten-bergman" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kirsten-bergman" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kirsten-bergman" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kirsten-bergman" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kirsten-bergman" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kirsten-bergman" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kirsten-bergman" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kirsten-bergman" type="b2602c69:ProjectViewProjectNode" />
@@ -356,12 +367,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555712592040</updated>
       <workItem from="1555712593333" duration="1652000" />
-      <workItem from="1556564215590" duration="83924000" />
+      <workItem from="1556564215590" duration="98347000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85576000" />
+    <option name="totallyTimeSpent" value="99999000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -369,7 +380,7 @@
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info id="npm" order="1" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.24947146" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.24947146" />
       <window_info id="Structure" order="3" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -458,13 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/style/helpers/_typography.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/Project/Item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -472,20 +476,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/style/helpers/_vars.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/style/components/_card.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -609,13 +599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/style/components/_form.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/components/Slider/Item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -647,16 +630,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/view/Projects/Item.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -667,58 +640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/decorators/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="53" column="55" lean-forward="true" selection-start-line="53" selection-start-column="55" selection-end-line="53" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <marker date="1557344970126" expanded="true" signature="80:138" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/Featured/Featured.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="89" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="89" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/style/components/_action.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="75" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/client/style/components/_slider.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
           <caret line="26" column="30" lean-forward="true" selection-start-line="26" selection-start-column="30" selection-end-line="26" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/components/Slider/Slider.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="77" column="34" lean-forward="true" selection-start-line="77" selection-start-column="34" selection-end-line="77" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/Project/Project.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12">
-          <caret line="28" column="38" lean-forward="true" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -739,27 +664,114 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/view/Project/Create.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="68" column="14" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/view/Featured/Featured.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/style/components/_card.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/style/helpers/_typography.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="15" lean-forward="true" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/style/components/_action.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/view/decorators/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-87">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#140#175#0" expanded="true" />
+            <marker date="1557424483556" expanded="true" signature="80:138" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/api/routes/projects.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="60" column="3" lean-forward="true" selection-start-line="60" selection-start-column="3" selection-end-line="60" selection-end-column="3" />
+        <state relative-caret-position="514">
+          <caret line="71" column="40" selection-start-line="71" selection-start-column="36" selection-end-line="71" selection-end-column="40" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/Project/Edit.js">
+    <entry file="file://$PROJECT_DIR$/src/client/view/Project/Project.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="50" column="69" lean-forward="true" selection-start-line="50" selection-start-column="30" selection-end-line="50" selection-end-column="69" />
+        <state relative-caret-position="260">
+          <caret line="48" column="40" lean-forward="true" selection-start-line="48" selection-start-column="40" selection-end-line="48" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/client/view/Project/Create.js">
+    <entry file="file://$PROJECT_DIR$/src/client/components/Slider/Slider.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="35" column="69" lean-forward="true" selection-start-line="35" selection-start-column="69" selection-end-line="35" selection-end-column="69" />
+        <state relative-caret-position="-762">
+          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/style/helpers/_vars.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="16" lean-forward="true" selection-start-column="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/view/Project/Form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="149" column="33" selection-start-line="149" selection-start-column="33" selection-end-line="149" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/style/components/_form.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="73" column="21" lean-forward="true" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
         </state>
       </provider>
     </entry>

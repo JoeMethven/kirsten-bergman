@@ -39,7 +39,7 @@ class Project extends React.Component {
 
     if (this.state.data) {
         const images = data.images
-            .sort((a, b) =>  b.position - a.position)
+            .sort((a, b) =>  a.position - b.position)
             .map(image => ({
                 image: `data:${image.contentType};base64,${image.data}`,
                 id: image._id
@@ -56,7 +56,7 @@ class Project extends React.Component {
           <div className="project">
             {actions}
             <div className="project-image">
-              <Slider controls={true} transition={true} content={images} />
+              <Slider controls={true} transition={true} items={images} />
             </div>
             <div className="project-details card card-sidebar card-no-hover scroll">
               <h3>

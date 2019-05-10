@@ -5,8 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import About from '../About/About';
 import Featured from '../Featured/Featured';
 import Projects from '../Projects/Projects';
-import ProjectsCreate from '../Project/Create';
-import ProjectEdit from '../Project/Edit';
+import ProjectForm from '../Project/Form';
 import Navigation from '../../components/Navigation/Navigation';
 import Project from '../Project/Project';
 import Literature from '../Literature/Literature';
@@ -47,8 +46,8 @@ class Layout extends React.Component {
         <div id="content" ref="content">
           <Switch>
             <Route exact path="/" component={Featured} />
-            <Route path="/projects/create" component={ProjectsCreate} />
-            <Route path="/projects/edit/:id" component={ProjectEdit} />
+            <Route path="/projects/create" component={ProjectForm} />
+            <Route path="/projects/edit/:id" component={ProjectForm} />
             <Route path="/projects/:id" component={Project} />
             <Route path="/projects" component={Projects} />
             <Route path="/literature/:id" component={Project} />
